@@ -22,8 +22,8 @@ jobs:
         run: "scripts/install"
       - name: "Build package & docs"
         run: "scripts/build"
-      # - name: "Publish to PyPI & deploy docs"
-      #   run: "scripts/publish"
+      - name: "Publish to PyPI & deploy docs"
+        run: "scripts/publish"
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
